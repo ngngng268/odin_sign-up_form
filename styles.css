@@ -1,14 +1,37 @@
+* {
+    --theme-color: rgb(9, 110, 9) ;
+    --invalid-border-color: red ;
+    --focus-border-color: blue ;
+    --light-text-color: white ;
+}
+
 body {
     display: flex;
     flex-direction: row;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
 }
 
 body div {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 form {
     display: flex;
     flex-direction: row;
+}
+
+header {
+    background-color: var(--theme-color);
+    padding-top: 30vh;
+    width: 100vh;
+}
+
+header h1 {
+    text-align: center;
+    color: var(--light-text-color);
+    opacity: 0.8;
 }
