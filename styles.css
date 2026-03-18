@@ -1,8 +1,8 @@
 * {
-    --theme-color: rgb(9, 110, 9) ;
-    --invalid-border-color: red ;
-    --focus-border-color: blue ;
-    --light-text-color: white ;
+    --theme-color: rgb(9, 110, 9);
+    --invalid-border-color: red;
+    --focus-border-color: blue;
+    --light-text-color: white;
 }
 
 body {
@@ -16,7 +16,9 @@ body {
 body div {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-between;
+    width: 60vw;
 }
 
 form {
@@ -27,11 +29,32 @@ form {
 header {
     background-color: var(--theme-color);
     padding-top: 30vh;
-    width: 100vh;
+    width: 30vw;
 }
 
 header h1 {
     text-align: center;
     color: var(--light-text-color);
     opacity: 0.8;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 60vw;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+input {
+    width: 20vw;
+}
+
+label {
+    width: fit-content;
+}
+
+form div {
+    width: fit-content;
 }
