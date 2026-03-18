@@ -1,16 +1,20 @@
 * {
     --theme-color: rgb(9, 110, 9);
-    --invalid-border-color: red;
-    --focus-border-color: blue;
+    --invalid: red;
     --light-text-color: white;
+    --light-gray: rgb(207, 207, 207);
+    box-sizing: border-box;
+    --hover-n-focus: rgb(145, 196, 219);
 }
 
 body {
     display: flex;
     flex-direction: row;
     min-height: 100vh;
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
+    background-color: rgb(207, 207, 207);
 }
 
 body div {
@@ -18,7 +22,13 @@ body div {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 60vw;
+    width: 100%;
+}
+
+body>div>div {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 30%;
 }
 
 form {
@@ -42,13 +52,27 @@ form {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 60vw;
     gap: 10px;
     justify-content: space-between;
 }
 
 input {
-    width: 20vw;
+    min-width: 20vw;
+    border-style: solid;
+    border-color: var(--optional-border-color, var(--light-gray));
+    border-radius: 5px;
+}
+
+input:hover {
+    --optional-border-color: var(--hover-n-focus);
+}
+
+input:focus {
+    --optional-border-color: var(--hover-n-focus);
+}
+
+input:invalid {
+    --optional-border-color: var(--invalid);
 }
 
 label {
@@ -56,5 +80,15 @@ label {
 }
 
 form div {
+    width: fit-content;
+}
+
+div[class="form-container"] {
+    --background-color: white;
+    background-color: var(--background-color);
+    box-shadow: 5px;
+}
+
+body div div form div {
     width: fit-content;
 }
