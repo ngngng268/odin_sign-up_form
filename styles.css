@@ -140,7 +140,7 @@ button {
     box-shadow: 2px 5px 3px gray;
 }
 
-a {
+div[class="submit-panel"]>p>a {
     text-decoration: none;
     font-weight: bold;
     color: var(--theme-color);
