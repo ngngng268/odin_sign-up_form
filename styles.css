@@ -48,9 +48,9 @@ form {
 }
 
 header {
-    background-color: var(--theme-color);
+    background-image: url(./images/header-background.png);
     display: flex;
-    padding-top: 30vh;
+    padding-top: 25vh;
     width: 40vw;
     height: 100vh;
     flex-direction: column;
@@ -58,23 +58,34 @@ header {
 }
 
 header>h1 {
+    display: flex;
+    flex-direction: row;
     text-align: center;
     color: var(--light-text-color);
     opacity: 0.8;
     width: 100%;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
     align-items: center;
+    justify-content: center;
     font-family: 'Norse', serif;
     font-weight: bold;
-    font-size: 8vh;
+    font-size: 10vh;
 }
 
 header>p {
     text-align: center;
     color: var(--light-text-color);
     padding-bottom: 0;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+header>p>a {
+    text-decoration: none;
+    color: var(--light-text-color);
+    text-decoration: underline;
 }
 
 form {
